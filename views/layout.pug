@@ -1,0 +1,17 @@
+doctype html
+html
+	head
+		link(rel='stylesheet', href='/public/stylesheets/style.css')
+	body
+		div(class='container')
+			div(class='sidebar')
+				a(href='/') 
+					h2 HOME
+				h3 Sort by:
+				a(href='/catalog/genres') Genre
+				br
+				a(href='/catalog/authors') Authors
+				a(href='/catalog/download') 
+					h3 Download book
+			div(class='content')
+				block content

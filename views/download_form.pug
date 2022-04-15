@@ -1,0 +1,15 @@
+extends layout 
+
+block content 
+	h3 This is a test 
+	form(method='POST' action='')
+		label(for='title') Title: 
+		input(type="text") 
+		button(type='submit') Submit
+
+	h2 This is temporary.. 	
+	each item in downloads 
+		p #{item.title} 
+		p #{item.author}
+		p #{item.link}
+		p #{item.format}

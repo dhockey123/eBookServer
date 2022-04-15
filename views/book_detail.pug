@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	img(src='/'+book.cover, alt="image-content", width='300px', height='480px')
+	br
+	each file in book.ebooks
+		a(href='/catalog/'+book._id+'/'+file) #{file} 
+		br
+	h4 #{book.title} 
+	h5 by #{book.authors}
+	p #{book.summary}
