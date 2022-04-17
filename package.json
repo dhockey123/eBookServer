@@ -14,9 +14,11 @@
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
+    "async": "^3.2.3",
     "axios": "^0.26.1",
     "cheerio": "^1.0.0-rc.10",
     "downloadjs": "^1.4.7",
+    "express-validator": "^6.14.0",
     "xml2js": "^0.4.23"
   }
 }

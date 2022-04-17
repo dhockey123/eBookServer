@@ -12,6 +12,7 @@ router.get('/authors', authorController.author_list)
 router.get('/authors/:id', authorController.author_books)
 router.get('/genres/:id', genreController.genre_index)
 router.get('/download', downloadController.download_form)
+router.post('/download', downloadController.download_form_post)
 
 router.get('/:id', bookController.book_detail)
 
