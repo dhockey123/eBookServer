@@ -1,0 +1,6 @@
+extends layout
+
+block content
+	each book in books
+		a(href='/catalog/'+book._id)
+			img(class='cardView' src='/'+book.cover, alt="image-content", width='150px', height='240px')

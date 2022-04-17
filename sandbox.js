@@ -1,3 +1,4 @@
+const { compareDocumentPosition } = require('domutils');
 const fs = require('fs');
 const { parseString } = require('xml2js');
 const xml2js = require('xml2js').parseString;
@@ -18,6 +19,10 @@ const getMetadata = (metafile) => {
 		MD.author = meta['dc:creator'][0]['_']
 		MD.summary = meta['dc:description'][0]
 		MD.genre = meta['dc:subject']
+
+		if(typeof MD.genre == 'undefined'){
+			MD.genre = ['undefined']
+		}
 	
 		identifier.map(ids => {
 			if(ids['$']['opf:scheme'] === 'ISBN'){
@@ -32,3 +37,10 @@ const getMetadata = (metafile) => {
 }
 
 module.exports = getMetadata
+
+// for(var i=0; i<10;i++){
+// 	if(i === 3 ){
+// 		return;
+// 	}
+// 	else{}
+// }

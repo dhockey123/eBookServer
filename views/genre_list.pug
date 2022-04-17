@@ -1,0 +1,9 @@
+extends layout 
+
+block content 
+	//- p #{genres}
+	div(class='listview')
+		each genre in genres 
+			p 
+				a(href='/catalog/genres/'+genre._id) <span style='font-weight:900;font-size:20px;'>#{genre.category}</span> 
+				|  </br> #{genre.count} Books

@@ -9,6 +9,7 @@ exports.index = function(req, res){
 
 exports.book_detail = function(req, res) {
 	var book = Books.find(book => book._id === req.params.id)
+
 	// res.download(path.join(book.path,book.ebooks[0]), book.ebooks[0])
 	res.render('book_detail', {book: book})
 

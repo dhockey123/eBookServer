@@ -1,0 +1,38 @@
+<tbody><tr valign="top" bgcolor="#C0C0C0">
+<td><b><a title="Sort results by ID" href="search.php?&amp;req=stephen+king+insomnia&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=id&amp;sortmode=DESC">ID</a></b></td>
+<td><b><a title="Sort results by Author" href="search.php?&amp;req=stephen+king+insomnia&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=author&amp;sortmode=DESC">Author(s)</a></b></td>
+<td><b><a title="Sort results by Title" href="search.php?&amp;req=stephen+king+insomnia&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=title&amp;sortmode=DESC">Title</a></b></td>
+<td><b><a title="Sort results by Publisher" href="search.php?&amp;req=stephen+king+insomnia&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=publisher&amp;sortmode=DESC">Publisher</a></b></td>
+<td><b><a title="Sort results by Year" href="search.php?&amp;req=stephen+king+insomnia&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=year&amp;sortmode=DESC">Year</a></b></td>
+<td><b><a title="Sort results by Pages" href="search.php?&amp;req=stephen+king+insomnia&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=pages&amp;sortmode=DESC">Pages</a></b></td>
+<td><b><a title="Sort results by Language" href="search.php?&amp;req=stephen+king+insomnia&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=language&amp;sortmode=DESC">Language</a></b></td>
+<td><b><a title="Sort results by Size" href="search.php?&amp;req=stephen+king+insomnia&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=filesize&amp;sortmode=DESC">Size</a></b></td>
+<td><b><a title="Sort results by Extension" href="search.php?&amp;req=stephen+king+insomnia&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=extension&amp;sortmode=DESC">Extension</a></b></td>
+<td colspan="3"><b>Mirrors</b></td>
+<td><b>Edit</b></td></tr><tr valign="top" bgcolor="#C6DEFF"><td>742837</td>
+				<td><a href="search.php?req=Stephen King&amp;column[]=author">Stephen King</a></td>
+				<td width="500"><a href="book/index.php?md5=5115C89666A2DC836D09CC67E452724E" title="" id="742837">Insomnia   <font face="Times" color="green"><i>[1&nbsp;ed.]</i></font><br> <font face="Times" color="green"><i>0451184963, 9780451184962</i></font></a></td>
+				<td>Signet</td>
+				<td nowrap="">1995</td>
+				<td></td>
+				<td>English </td>
+				<td nowrap="">696 Kb</td>
+				<td nowrap="">epub</td>
+				<td><a href="http://library.lol/main/5115C89666A2DC836D09CC67E452724E" title="this mirror">[1]</a></td><td><a href="https://cdn1.booksdl.org/ads.php?md5=5115C89666A2DC836D09CC67E452724E" title="Libgen.gs">[2]</a></td><td><a href="https://3lib.net/md5/5115C89666A2DC836D09CC67E452724E" title="Z-Library">[3]</a></td>
+				<td><a href="https://library.bz/main/edit/5115C89666A2DC836D09CC67E452724E" title="Libgen Librarian">[edit]</a></td>
+				</tr>
+
+<tr valign="top" bgcolor=""><td>812327</td>
+				<td><a href="search.php?req=Stephen King&amp;column[]=author">Stephen King</a></td>
+				<td width="500"><a href="book/index.php?md5=948E4CBC4503DAC249EA9491D6C0033B" title="" id="812327">Insomnia<br> <font face="Times" color="green"><i>1848940726, 9781848940727</i></font></a></td>
+				<td>Hodder &amp; Stoughton</td>
+				<td nowrap="">2010</td>
+				<td></td>
+				<td>English</td>
+				<td nowrap="">696 Kb</td>
+				<td nowrap="">epub</td>
+				<td><a href="http://library.lol/main/948E4CBC4503DAC249EA9491D6C0033B" title="this mirror">[1]</a></td><td><a href="https://cdn1.booksdl.org/ads.php?md5=948E4CBC4503DAC249EA9491D6C0033B" title="Libgen.gs">[2]</a></td><td><a href="https://3lib.net/md5/948E4CBC4503DAC249EA9491D6C0033B" title="Z-Library">[3]</a></td>
+				<td><a href="https://library.bz/main/edit/948E4CBC4503DAC249EA9491D6C0033B" title="Libgen Librarian">[edit]</a></td>
+				</tr>
+
+</tbody>

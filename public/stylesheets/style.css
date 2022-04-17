@@ -1,11 +1,11 @@
 body {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-size: 20px;
-	background-color: rgb(221, 221, 221);
+	background-color: #c8d9e9;
 }
 
 a {
-  color: #00B7FF;
+  color: #66717c;
 }
 img{
 	box-shadow: 5px 5px 10px 2px #282c34;
@@ -23,16 +23,35 @@ img{
 }
 .content{
 	width: calc(100vw - 200px);
-	margin-left: 210px;
+	margin-left: 250px;
 }
 .sidebar{
 	width: 200px;
-	height: 100vh;
-	border-right: 4px solid black;
+	height: 98vh;
+	border: 4px solid #8b8f96;
+	border-radius: 20px;
+	background-color: #dde2ec;
 
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	position: fixed;
 	overflow-x: hidden;
+}
+
+.listview{
+	display: grid;
+	grid-template-rows: repeat(100, 80px);
+	grid-auto-flow: column;
+
+	gap: -20px;
+}
+
+.listview *{
+	
+	/* border: 2px solid red; */
+	margin: 0px;
+	width: 80%;
+	height: fit-content;
+	text-align: center;
 }
