@@ -38,9 +38,3 @@ const getMetadata = (metafile) => {
 
 module.exports = getMetadata
 
-// for(var i=0; i<10;i++){
-// 	if(i === 3 ){
-// 		return;
-// 	}
-// 	else{}
-// }

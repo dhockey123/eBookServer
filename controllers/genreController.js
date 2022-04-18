@@ -2,7 +2,6 @@ const {Book, Books} = require('../models/book')
 const { Genre, Genres }  = require('../models/genre')
 
 exports.genre_list = function(req, res){
-	console.log(Genres.length)
 	res.render('genre_list', {genres: Genres})
 }
 

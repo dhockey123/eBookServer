@@ -5,10 +5,9 @@ const fs = require('fs');
 const { HttpError } = require('http-errors');
 const { body, validationResult } = require('express-validator');
 
-var fileLink;
-
 const Download = (title, author, link, format) => {
 	return({
+		_id: Math.round(Math.random()*1e6),
 		title: title,
 		author: author,
 		link: link,
@@ -59,36 +58,38 @@ const getPossibleDownloads = async (searchString) => {
 			}
 			author = list_title_author[i]
 			link = list_link[i+2]
-	
-			// console.log(title, "\n", author, "\n", link, "\n", list_format[formatCounter], "\n\n")
+			
 			if(list_format[formatCounter] === 'epub' || list_format[formatCounter] === 'mobi'){
-				console.log('test')
 				Downloads.push(Download(title, author, link, list_format[formatCounter]))
 			}
 			formatCounter++;
 		}
-		console.log(Downloads)
-	
-		// axios.get('http://library.lol/main/5115C89666A2DC836D09CC67E452724E').then(res => {
-		
-		// 	var $ = cheerio.load(res.data)
-		// 	fileLink = $('h2').html()
-		// 	fileLink = fileLink.match(/"(.*)"/)[1]
-		// 	console.log(fileLink)
-	
-		// 	http.get(fileLink, res => {
-		// 		var fileName = `${Downloads[0].title.trim()}.${Downloads[0].format}`
-		// 		// res.pipe(fs.createWriteStream(fileName) )
-		// 		console.log('File has been downloadeded.')
-		// 	})
-		// })
-		// console.log(Downloads)
-		return Downloads
+	}).then(async () => {
+		 for (var i=0;i<Downloads.length;i++){
+			await axios.get(Downloads[i].link).then(res => {
+				var $ = cheerio.load(res.data)
+					var fileLink = $('h2').html()
+					fileLink = fileLink.match(/"(.*)"/)[1]
+					Downloads[i].link = fileLink
+				})
+			}
+			return Downloads
+	})	
+}
+
+const downloadFile = (obj) => {
+	return new Promise(resolve => {
+		http.get(obj.link, res => {
+			res.pipe(fs.createWriteStream(`./files/Downloads/${obj.title.trim()}.${obj.format}`) )
+			res.on("end", () => {
+				console.log('File has been downloadeded.. ', obj.url)
+				resolve()
+			})
+		})
 	})
 }
 
 
-// const fs = require('fs')
 exports.download_form = function(req, res){
 	res.render('download_form', {downloads: []})
 }
@@ -104,4 +105,14 @@ exports.download_form_post = function(req, res){
 			res.render('download_form', {downloads: Downloads})
 		)
 	}
+}
+
+exports.download_ebook_form_post = function(req, res){
+	var download = Downloads.find( url => url._id == req.params.id)
+
+	async function downloadSendFile(){
+		await downloadFile(download)
+		res.download(`./files/Downloads/${download.title.trim()}.${download.format}`,`${download.title}.${download.format}`)
+	}
+	downloadSendFile()
 }

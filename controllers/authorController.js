@@ -2,9 +2,7 @@ const { Book, Books } = require('../models/book')
 const { Author, Authors } = require('../models/author')
 
 exports.author_list = function(req, res){
-	console.log(Authors[2].name)
 	for(var i =0;i<Authors.length;i++){
-		console.log("DEBUG:", Authors[i].book_count)
 	}
 	res.render('author_list', {authors: Authors})
 }
